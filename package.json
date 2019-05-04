@@ -25,7 +25,8 @@
     "url": "git+https://github.com/reneehickman/react-google-books-search.git"
   },
   "engines": {
-    "node": "10.15.1"
+    "node": "10.15.1",
+    "npm": "6.9.0"
   },
   "dependencies": {
     "axios": "^0.18.0",

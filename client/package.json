@@ -20,7 +20,8 @@
     "eject": "react-scripts eject"
   },
   "engines": {
-    "node": "10.15.1"
+    "node": "10.15.1",
+    "npm": "6.9.0"
   },
   "browserslist": [
     ">0.2%",
