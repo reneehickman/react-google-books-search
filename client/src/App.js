@@ -11,20 +11,21 @@ import Header from "./components/Header";
 class App extends Component {
   render() {
     return (
-      <Router>
+      
       <div className="body">
       <div className="bodyContent">
         <Navi />
         <Header />
+        <Router>
         <Switch>
           <Route exact path="/" component={Search} />
           <Route exact path="/saved" component={Saved} />
           {/* <Route component={NoMatch} /> */}
         </Switch>
+        </Router>
         </div>
         <Footer />
       </div>
-    </Router>
     );
   }
 }

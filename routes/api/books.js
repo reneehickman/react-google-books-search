@@ -1,5 +1,4 @@
 const router = require("express").Router();
-const axios = require("axios");
 const booksController = require("../../controllers/booksController");
 
 
@@ -13,6 +12,7 @@ router
 router
   .route("/:id")
   .get(booksController.findById)
+  .put(booksController.update)
   .delete(booksController.remove);
 
 module.exports = router;

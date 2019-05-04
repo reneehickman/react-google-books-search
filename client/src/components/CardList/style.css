@@ -30,6 +30,10 @@
 }
 
 
+.cols{
+  padding-bottom:10px;
+}
+
 
 
 @media (max-width: 576px){
@@ -40,4 +44,11 @@
     margin-bottom:20px;
   }
   }
+
+
+  @media (min-width: 992px){
+    .cols{
+      padding:0px;
+    }
+    }
 

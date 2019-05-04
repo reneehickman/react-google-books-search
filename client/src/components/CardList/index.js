@@ -9,10 +9,10 @@ const CardList = props => (
 			<div className="card" key={book.id}>
 			<div className="cardContainer">
 				<div className="row">
-					<div className="col-md-10">
+					<div className="col-sm-12 col-md-8 col-lg-10">
 						<h3 className="bookTitle">{book.volumeInfo.title}</h3>
 					</div>
-					<div className="col-md-2">
+					<div className="cols col-md-4 col-lg-2">
 						<Button
 							variant="secondary"
 							href={book.volumeInfo.infoLink}
