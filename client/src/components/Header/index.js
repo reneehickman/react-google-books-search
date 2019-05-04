@@ -6,8 +6,8 @@ function Header() {
   return (
     <div>
     <div className="jumbotron text-center">
-      <h1>Click-a-Daisy!</h1>
-      <h3>Click an image to earn a point. If you click the same image twice, you lose!</h3>
+      <h1>Google Book Search!</h1>
+      <h4>Search for a book and save it for later!</h4>
     </div>
     </div>
   );

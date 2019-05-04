@@ -8,22 +8,23 @@ const bookSchema = new Schema({
   },
   authors: { 
     type: String, 
-    required: true 
   },
   description: {
     type: String,
-    required: true,
     trim: true
   },
   image: {
     type: String,
-    required: true,
     trim: true
   },
   link: {
     type: String,
-    required: true
-  }
+  },
+  id: {
+    type: String,
+    required: true,
+    unique: true,
+  },
 });
 
 const Book = mongoose.model("Book", bookSchema);

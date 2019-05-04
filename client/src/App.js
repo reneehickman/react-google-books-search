@@ -1,23 +1,28 @@
 import React, { Component } from "react";
-import "./App.css";
-import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Header from "./components/Header";
+import "./App.css";
+import Search from "./pages/Search";
+import Saved from "./pages/Saved";
 import Footer from "./components/Footer";
-import Nav from "./components/Header/Nav";
+import Navi from "./components/Header/Navi";
+import Header from "./components/Header";
+
 
 class App extends Component {
   render() {
     return (
       <Router>
-      <div>
-        <Nav />
+      <div className="body">
+      <div className="bodyContent">
+        <Navi />
+        <Header />
         <Switch>
-          <Route exact path="/" component={Books} />
-          <Route exact path="/books" component={Books} />
-          <Route exact path="/books/:id" component={Detail} />
-          <Route component={NoMatch} />
+          <Route exact path="/" component={Search} />
+          <Route exact path="/saved" component={Saved} />
+          {/* <Route component={NoMatch} /> */}
         </Switch>
+        </div>
+        <Footer />
       </div>
     </Router>
     );
