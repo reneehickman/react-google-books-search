@@ -6,24 +6,6 @@ const path = require("path");
 const PORT = process.env.PORT || 3001;
 const app = express();
 
-// Define middleware here
-app.use(logger('dev'));
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
-// Serve up static assets (usually on heroku)
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
-  
-}
-
-
-// Define API routes here
-app.use(routes);
-
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, './client/build/index.html'));
-});
-
 // set up mongoose to leverage built-in JavaScript ES6 Promises
 mongoose.Promise = Promise;
 // if deployed, use the deployed database. else, use the local database.
@@ -40,6 +22,24 @@ mongoose.connect(MONGODB_URI, { useNewUrlParser: true })
 // Connect to the Mongo DB
 mongoose.set('useFindAndModify', false);
 mongoose.set('useCreateIndex', true);
+
+// Define middleware here
+app.use(logger('dev'));
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
+// Define API routes here
+app.use(routes);
+
+// Serve up static assets (usually on heroku)
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static(path.join(__dirname, 'client', 'build')));
+
+  app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
+  });
+  
+}
 
 
 app.listen(PORT, () => {

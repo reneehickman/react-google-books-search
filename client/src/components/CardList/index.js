@@ -6,16 +6,16 @@ const CardList = props => (
 	<div className="cards">
 	
 		{props.books.map((book) => (
-			<div className="card" key={book.id}>
+			<div className="card" key={book.googleId}>
 			<div className="cardContainer">
 				<div className="row">
 					<div className="col-sm-12 col-md-8 col-lg-10">
-						<h3 className="bookTitle">{book.volumeInfo.title}</h3>
+						<h3 className="bookTitle">{book.title}</h3>
 					</div>
 					<div className="cols col-md-4 col-lg-2">
 						<Button
 							variant="secondary"
-							href={book.volumeInfo.infoLink}
+							href={book.link}
 							target="_blank"
 							rel="noopener noreferrer"
 							className="view">
@@ -42,8 +42,8 @@ const CardList = props => (
 				<div className="row">
 					<div className="col-md-6">
 						<p className="bookAuthors">
-							Written by {book.volumeInfo.authors
-                      ? book.volumeInfo.authors.join(", ")
+							Written by {book.authors
+                      ? book.authors.join(", ")
                       : "N/A"}
 						</p>
 					</div>
@@ -51,14 +51,14 @@ const CardList = props => (
 				<div className="row">
 					<div className="col-lg-2 col-md-4 col-sm-5">
 						<img
-							src={book.volumeInfo.imageLinks 
-								? book.volumeInfo.imageLinks.thumbnail
+							src={book.link 
+								? book.image
 								: "https://cdn3.iconfinder.com/data/icons/education-and-school-8/48/Book-512.png"}
-							alt={book.volumeInfo._idtitle}
+							alt={book.title}
 							className="bookImage img-fluid w-100" />
 					</div>
 					<div className="col-lg-10 col-md-8 col-sm-7">
-						<p className="bookDescription">{book.volumeInfo.description}</p>
+						<p className="bookDescription">{book.description}</p>
 					</div>
 				</div>
 				</div>

@@ -7,7 +7,7 @@ const bookSchema = new Schema({
     required: true 
   },
   authors: { 
-    type: String, 
+    type: [String] 
   },
   description: {
     type: String,
@@ -20,7 +20,7 @@ const bookSchema = new Schema({
   link: {
     type: String,
   },
-  id: {
+  googleId: {
     type: String,
     required: true,
     unique: true,
