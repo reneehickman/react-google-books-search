@@ -14,7 +14,7 @@
 
 
 .cards{
-  padding:40px;
+  padding:0px;
 }
 
 .card{
@@ -28,7 +28,6 @@
 .view, .save, .delete{
   margin-top:5px;
 }
-
 
 .cols{
   padding-bottom:10px;

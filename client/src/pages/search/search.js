@@ -74,12 +74,12 @@ class Search extends Component {
           <div className="row">
             <div className="col-md-12">
               <Card className="mt-1 shadow cardz" style={{ marginBottom: "20px" }}>
-                <Card.Header className="cardHeader" style={{ background: "#e9ecef" }}>
-                  <h3>
+                <Card.Header className="cardHeader" style={{ background: "#4285f4", color: "#fff" }}>
+                  <h3 style={{ marginBottom: "0px" }}>
                     Search
                 </h3>
                 </Card.Header>
-                <Card.Body style={{ background: "#fcfcfc" }}>
+                <Card.Body style={{ background: "#f2f2f2" }}>
                   <form>
                     <div className="form-group">
                       <div className="input-group">
@@ -109,12 +109,12 @@ class Search extends Component {
           <div className="row">
             <div className="col-md-12">
               <Card className="mt-1 shadow">
-                <Card.Header className="cardHeader" style={{ background: "#e9ecef" }}>
-                  <h3>
+                <Card.Header className="cardHeader" style={{ background: "#4285f4", color: "#fff" }}>
+                  <h3 style={{ marginBottom: "0px" }}>
                     Results
                 </h3>
                 </Card.Header>
-                <Card.Body style={{ background: "#fcfcfc" }}>
+                <Card.Body style={{ background: "#f2f2f2" }}>
                   {!this.state.books.length ? (
                     <h2 className="text-center">Search for a Book!</h2>
                   ) : (

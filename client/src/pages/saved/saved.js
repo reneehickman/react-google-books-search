@@ -42,12 +42,12 @@ class Saved extends Component {
           <div className="row">
             <div className="col-md-12">
               <Card className="mt-1 shadow">
-                <Card.Header className="cardHeader" style={{ background: "#e9ecef" }}>
-                  <h3>
+                <Card.Header className="cardHeader" style={{ background: "#4285f4", color: "#fff" }}>
+                  <h3 style={{ marginBottom: "0px" }}>
                     Saved Books
                 </h3>
                 </Card.Header>
-                <Card.Body style={{ background: "#fcfcfc" }}>
+                <Card.Body style={{ background: "#f2f2f2" }}>
                   {!this.state.books.length ? (
                     <h2 className="text-center">Save a Book!</h2>
                   ) : (
