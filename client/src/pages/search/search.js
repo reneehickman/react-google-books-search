@@ -17,18 +17,18 @@ class Search extends Component {
   searchBooks(query) {
     API.searchBooks(query)
       .then((res) => {
-        const bookList = res.data.map((b) => {
+        const card = res.data.map((book) => {
           return {
-            googleId: b.id,
-            title: b.volumeInfo.title,
-            authors: b.volumeInfo.authors,
-            description: b.volumeInfo.description,
-            image: b.volumeInfo.imageLinks.thumbnail,
-            link: b.volumeInfo.infoLink
+            googleId: book.id,
+            title: book.volumeInfo.title,
+            authors: book.volumeInfo.authors,
+            description: book.volumeInfo.description,
+            image: book.volumeInfo.imageLinks.thumbnail,
+            link: book.volumeInfo.infoLink
           };
         });
 
-        this.setState({ books: bookList });
+        this.setState({ books: card });
       })
       .catch((error) => console.log(error));
   }

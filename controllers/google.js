@@ -1,7 +1,7 @@
 const axios = require('axios');
 const db = require('../models');
 
-const ajax = axios.create({
+const json = axios.create({
   headers: {
     'Content-type': 'application/json',
   },
@@ -11,20 +11,20 @@ module.exports = {
   findAll: async function(req, res) {
     const { query: params } = req;
     try {
-      const results = await ajax.get(
+      const results = await json.get(
         'https://www.googleapis.com/books/v1/volumes',
         { params }
       );
 
       const apiBooks = results.data.items.filter(
-        (result) =>
-          result.id &&
-          result.volumeInfo.title &&
-          result.volumeInfo.infoLink &&
-          result.volumeInfo.authors &&
-          result.volumeInfo.description &&
-          result.volumeInfo.imageLinks &&
-          result.volumeInfo.imageLinks.thumbnail
+        (res) =>
+          res.id &&
+          res.volumeInfo.title &&
+          res.volumeInfo.infoLink &&
+          res.volumeInfo.authors &&
+          res.volumeInfo.description &&
+          res.volumeInfo.imageLinks &&
+          res.volumeInfo.imageLinks.thumbnail
       );
 
       // Get all books from the database.
@@ -36,7 +36,7 @@ module.exports = {
         dbBooks.every((dbBook) => dbBook.googleId.toString() !== apiBook.id)
       );
 
-      // Send the resulting list of books back as JSON.
+      // Send the resing list of books back as JSON.
       return res.json(books);
     } catch (e) {
       return res.status(422).json(e);
