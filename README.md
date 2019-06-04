@@ -6,6 +6,8 @@ Click [here](https://pure-stream-37289.herokuapp.com/) to view the deployed app 
 
 ![Screenshot](screenshot.JPG)
 
+![Screenshot](screenshot3.JPG)
+
 ## Technologies used
 * React.js https://reactjs.org/
 * react-router-dom https://www.npmjs.com/package/react-router-dom
@@ -21,7 +23,7 @@ Click [here](https://pure-stream-37289.herokuapp.com/) to view the deployed app 
 * Bootstrap 4 https://getbootstrap.com/docs/4.1/layout/overview/
 
 
-### Starting the app locally
+<!-- ### Starting the app locally
 
 Start by installing front and backend dependencies. While in this directory, run the following command:
 
@@ -41,4 +43,4 @@ Your app should now be running on <http://localhost:3000>. The Express server sh
 
 ### Deployment (Heroku)
 
-To deploy, simply add and commit your changes, and push to Heroku. As is, the NPM scripts should take care of the rest.
+To deploy, simply add and commit your changes, and push to Heroku. As is, the NPM scripts should take care of the rest. -->
