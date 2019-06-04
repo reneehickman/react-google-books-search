@@ -6,7 +6,7 @@ Click [here](https://pure-stream-37289.herokuapp.com/) to view the deployed app 
 
 ![Screenshot](screenshot.JPG)
 
-![Screenshot](screenshot3.JPG)
+![Screenshot](screenshot4.JPG)
 
 ## Technologies used
 * React.js https://reactjs.org/
